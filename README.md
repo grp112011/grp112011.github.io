@@ -1,1 +1,1 @@
-[Мой платёж - калькулятор ЖКУ](/MyPaing/index.html)
+[Мой платёж - калькулятор ЖКУ](https://grp112011.github.io/MyPaing/)
