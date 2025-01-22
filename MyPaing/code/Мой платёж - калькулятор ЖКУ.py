@@ -48,7 +48,7 @@ def validate1(text, val):
 
 def check_message(user):
     sp = {}
-    for i in requests.get(f'https://api.telegram.org/bot7553923604:AAHACFhsKARYUbOfz9i6r0XsM2t0e8t8Xpc/getUpdates?offset=0').json()['result']:
+    for i in requests.get(f'https://api.telegram.org/bot*************************************/getUpdates?offset=0').json()['result']:
         sp[i['message']['from']['username']] = i['message']['chat']['id']
     for u, i in sp.items():
         if u == user:
@@ -389,12 +389,12 @@ def sendf(user, txt):
 
     if user in spn:
         lmdl.configure(text='Успешно')
-        requests.get(f"https://api.telegram.org/bot7553923604:AAHACFhsKARYUbOfz9i6r0XsM2t0e8t8Xpc/sendMessage?chat_id={spn[spn.index(user) + 1]}&text={txt}")
+        requests.get(f"https://api.telegram.org/bot***************************************/sendMessage?chat_id={spn[spn.index(user) + 1]}&text={txt}")
     
     elif check_message(user) != False:
         a = open('names.txt', 'a')
         a.write(user + ' ' + check_message(user) + '\n')
-        requests.get(f"https://api.telegram.org/bot7553923604:AAHACFhsKARYUbOfz9i6r0XsM2t0e8t8Xpc/sendMessage?chat_id={check_message(user)}&text={txt}").json()
+        requests.get(f"https://api.telegram.org/bot***************************************/sendMessage?chat_id={check_message(user)}&text={txt}").json()
         lmdl.configure(text='Успешно')
         
     else:
